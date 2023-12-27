@@ -1,0 +1,125 @@
+@nix { "action": "setPhase", "phase": "unpackPhase" }
+unpacking sources
+unpacking source archive /nix/store/j0gin7rr6fdmc3has5ia7g8sjnc9xzam-source
+source root is source
+patching script interpreter paths in source/doc/input-filter.sh
+source/doc/input-filter.sh: interpreter directive changed from "#!/bin/bash" to "/nix/store/q1c2flcykgr4wwg5a6h450hxbk4ch589-bash-5.2-p15/bin/bash"
+patching script interpreter paths in source/doc/input-filter-h.sh
+source/doc/input-filter-h.sh: interpreter directive changed from "#!/bin/bash" to "/nix/store/q1c2flcykgr4wwg5a6h450hxbk4ch589-bash-5.2-p15/bin/bash"
+@nix { "action": "setPhase", "phase": "patchPhase" }
+patching sources
+applying patch /nix/store/alz6da3wnrpjfq1gm6qlbkl5ldg7riv4-0060-libjack-path.patch
+patching file src/modules/meson.build
+Hunk #1 succeeded at 187 (offset 18 lines).
+patching file src/modules/module-jack-tunnel/weakjack.h
+applying patch /nix/store/a688bd5jzc5mihk1yc63j7chna71js4v-0070-installed-tests-path.patch
+patching file meson.build
+Hunk #1 succeeded at 451 with fuzz 2 (offset 71 lines).
+patching file meson_options.txt
+@nix { "action": "setPhase", "phase": "updateAutotoolsGnuConfigScriptsPhase" }
+updateAutotoolsGnuConfigScriptsPhase
+@nix { "action": "setPhase", "phase": "configurePhase" }
+configuring
+mesonConfigurePhase flags: --prefix=/nix/store/qq4y1pdj609c1sqky58qsz5s08b2mg3a-pipewire-0.3.85 --libdir=/nix/store/qq4y1pdj609c1sqky58qsz5s08b2mg3a-pipewire-0.3.85/lib --libexecdir=/nix/store/qq4y1pdj609c1sqky58qsz5s08b2mg3a-pipewire-0.3.85/libexec --bindir=/nix/store/qq4y1pdj609c1sqky58qsz5s08b2mg3a-pipewire-0.3.85/bin --sbindir=/nix/store/qq4y1pdj609c1sqky58qsz5s08b2mg3a-pipewire-0.3.85/sbin --includedir=/nix/store/0vfi8yp9msinmpn8lx08rscbqjv9297w-pipewire-0.3.85-dev/include --mandir=/nix/store/z44v4v3vn18w7hcb1b5yjbxxx08viraz-pipewire-0.3.85-man/share/man --infodir=/nix/store/qq4y1pdj609c1sqky58qsz5s08b2mg3a-pipewire-0.3.85/share/info --localedir=/nix/store/qq4y1pdj609c1sqky58qsz5s08b2mg3a-pipewire-0.3.85/share/locale -Dauto_features=enabled -Dwrap_mode=nodownload --buildtype=plain -Ddocs=enabled -Dudevrulesdir=lib/udev/rules.d -Dinstalled_tests=enabled -Dinstalled_test_prefix=/nix/store/8crs91ihg3f401cy5qmilw91jfrdq5hk-pipewire-0.3.85-installedTests -Dlibjack-path=/nix/store/2h6vlx9rqqkl7raf8vvk2zqi3d001aid-pipewire-0.3.85-jack/lib -Dlibcamera=enabled -Dlibffado=enabled -Droc=enabled -Dlibpulse=enabled -Davahi=enabled -Dgstreamer=enabled -Dsystemd-system-service=enabled -Dudev=disabled -Dffmpeg=enabled -Dbluez5=disabled -Dbluez5-backend-hsp-native=enabled -Dbluez5-backend-hfp-native=enabled -Dbluez5-backend-native-mm=enabled -Dbluez5-backend-ofono=enabled -Dbluez5-backend-hsphfpd=enabled -Dbluez5-codec-lc3plus=disabled -Dbluez5-codec-lc3=disabled -Dbluez5-codec-ldac=disabled -Dsysconfdir=/etc -Draop=enabled -Dsession-managers= -Dvulkan=enabled -Dx11=enabled -Dx11-xfixes=enabled -Dlibcanberra=enabled -Dlibmysofa=enabled -Dsdl2=disabled -Drlimits-install=false -Dcompress-offload=enabled
+[1mThe Meson build system[0m
+Version: 1.2.3
+Source dir: [1m/build/source[0m
+Build dir: [1m/build/source/build[0m
+Build type: [1mnative build[0m
+Project name: [1mpipewire[0m
+Project version: [1m0.3.85[0m
+C compiler for the host machine: [1mgcc[0m (gcc 12.3.0 "gcc (GCC) 12.3.0")
+C linker for the host machine: [1mgcc[0m ld.bfd 2.40
+Host machine cpu family: [1mx86_64[0m
+Host machine cpu: [1mx86_64[0m
+Has header "[1mfeatures.h[0m" : [1;32mYES[0m 
+Fetching value of define "[1m__GLIBC__[0m" : 2 
+Compiler for C supports arguments -fvisibility=hidden: [1;32mYES[0m 
+Compiler for C supports arguments -fno-strict-aliasing: [1;32mYES[0m 
+Compiler for C supports arguments -Werror=suggest-attribute=format: [1;32mYES[0m 
+Compiler for C supports arguments -Wsign-compare: [1;32mYES[0m 
+Compiler for C supports arguments -Wpointer-arith: [1;32mYES[0m 
+Compiler for C supports arguments -Wpointer-sign: [1;32mYES[0m 
+Compiler for C supports arguments -Wformat: [1;32mYES[0m 
+Compiler for C supports arguments -Wformat-security: [1;32mYES[0m 
+Compiler for C supports arguments -Wimplicit-fallthrough: [1;32mYES[0m 
+Compiler for C supports arguments -Wmissing-braces: [1;32mYES[0m 
+Compiler for C supports arguments -Wtype-limits: [1;32mYES[0m 
+Compiler for C supports arguments -Wvariadic-macros: [1;32mYES[0m 
+Compiler for C supports arguments -Wmaybe-uninitialized: [1;32mYES[0m 
+Compiler for C supports arguments -Wno-missing-field-initializers: [1;32mYES[0m 
+Compiler for C supports arguments -Wno-unused-parameter: [1;32mYES[0m 
+Compiler for C supports arguments -Wno-pedantic: [1;32mYES[0m 
+Compiler for C supports arguments -Wdeprecated-declarations: [1;32mYES[0m 
+Compiler for C supports arguments -Wunused-result: [1;32mYES[0m 
+Compiler for C supports arguments -Werror=return-type: [1;32mYES[0m 
+Compiler for C supports arguments -D_GNU_SOURCE: [1;32mYES[0m 
+Compiler for C supports arguments -DFASTPATH: [1;32mYES[0m 
+Compiler for C supports arguments -Werror=implicit-function-declaration: [1;32mYES[0m 
+Compiler for C supports arguments -Werror=int-conversion: [1;32mYES[0m 
+Compiler for C supports arguments -Werror=old-style-declaration: [1;32mYES[0m 
+Compiler for C supports arguments -Werror=old-style-definition: [1;32mYES[0m 
+Compiler for C supports arguments -Werror=missing-parameter-type: [1;32mYES[0m 
+Compiler for C supports arguments -Werror=strict-prototypes: [1;32mYES[0m 
+C++ compiler for the host machine: [1mg++[0m (gcc 12.3.0 "g++ (GCC) 12.3.0")
+C++ linker for the host machine: [1mg++[0m ld.bfd 2.40
+Compiler for C++ supports arguments -fvisibility=hidden: [1;32mYES[0m 
+Compiler for C++ supports arguments -fno-strict-aliasing: [1;32mYES[0m 
+Compiler for C++ supports arguments -Werror=suggest-attribute=format: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wsign-compare: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wpointer-arith: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wpointer-sign: [1;31mNO[0m 
+Compiler for C++ supports arguments -Wformat: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wformat-security: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wimplicit-fallthrough: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wmissing-braces: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wtype-limits: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wvariadic-macros: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wmaybe-uninitialized: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wno-missing-field-initializers: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wno-unused-parameter: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wno-pedantic: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wdeprecated-declarations: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wunused-result: [1;32mYES[0m 
+Compiler for C++ supports arguments -Werror=return-type: [1;32mYES[0m 
+Compiler for C++ supports arguments -Wno-c99-designator: [1;31mNO[0m 
+Compiler for C supports arguments -msse: [1;32mYES[0m 
+Compiler for C supports arguments -msse2: [1;32mYES[0m 
+Compiler for C supports arguments -mssse3: [1;32mYES[0m 
+Compiler for C supports arguments -msse4.1: [1;32mYES[0m 
+Compiler for C supports arguments -mfma: [1;32mYES[0m 
+Compiler for C supports arguments -mavx: [1;32mYES[0m 
+Compiler for C supports arguments -mavx2: [1;32mYES[0m 
+Compiler for C supports arguments -mfpu=neon: [1;31mNO[0m 
+Library [1matomic[0m found: [1;32mYES[0m
+Checking if "[1m8-byte __atomic_fetch_add without libatomic[0m" : links: [1;32mYES[0m 
+Has header "[1msys/mount.h[0m" : [1;32mYES[0m 
+Has header "[1msys/param.h[0m" : [1;32mYES[0m 
+Has header "[1msys/random.h[0m" : [1;32mYES[0m 
+Has header "[1msys/vfs.h[0m" : [1;32mYES[0m 
+Has header "[1mpwd.h[0m" : [1;32mYES[0m 
+Has header "[1mgrp.h[0m" : [1;32mYES[0m 
+Fetching value of define "[1mSYS_pidfd_open[0m" : 434 
+Found pkg-config: [1m/nix/store/ljrkf0kwgckcy02kdlz8sjdnxb2pwjb4-pkg-config-wrapper-0.29.2/bin/pkg-config[0m (0.29.2)
+Run-time dependency [1msystemd[0m found: [1;32mYES[0m [36m254[0m
+Run-time dependency [1mlibsystemd[0m found: [1;32mYES[0m [36m254[0m
+Run-time dependency [1mlibselinux[0m found: [1;32mYES[0m [36m3.3[0m
+Configuring [1mMakefile[0m using configuration
+Library [1mm[0m found: [1;32mYES[0m
+Library [1mrt[0m found: [1;32mYES[0m
+Library [1mdl[0m found: [1;32mYES[0m
+Run-time dependency [1mthreads[0m found: [1;32mYES[0m
+Run-time dependency [1mdbus-1[0m found: [1;32mYES[0m [36m1.14.10[0m
+Dependency [1msdl2[0m skipped: feature [1msdl2[0m disabled
+Run-time dependency [1mlibdrm[0m found: [1;32mYES[0m [36m2.4.117[0m
+Run-time dependency [1mreadline[0m found: [1;32mYES[0m [36m8.2[0m
+Run-time dependency [1mlibavcodec[0m found: [1;32mYES[0m [36m60.3.100[0m
+Run-time dependency [1mlibavformat[0m found: [1;32mYES[0m [36m60.3.100[0m
+Run-time dependency [1mlibavutil[0m found: [1;32mYES[0m [36m58.2.100[0m
+Did not find CMake 'cmake'
+Found CMake: [1;31mNO[0m
+Run-time dependency [1mopus[0m found: [1;31mNO[0m (tried pkgconfig)
+
+meson.build:303:11: [1;31mERROR:[0m Dependency "opus" not found, tried pkgconfig
+
+A full log can be found at [1m/build/source/build/meson-logs/meson-log.txt[0m
